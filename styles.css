@@ -72,21 +72,10 @@ section p {
   padding: 0 10px;
 }
 
-/* Galerie */
-.image-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-.image-item {
-  flex: 1 1 300px;
-  max-width: 300px;
-}
-.image-item img {
-  width: 100%;
-  height: auto;
-  border: 1px solid #ccc;
+/* Image d'accueil centrée */
+.accueil-photo {
+  display: block;
+  margin: 0 auto;
 }
 
 /* Formulaire de contact */
@@ -127,4 +116,107 @@ footer {
   text-align: center;
   padding: 15px;
   font-size: 0.9em;
+}
+
+/* ----------------- SCROLLABLE GALLERY STYLES ----------------- */
+/* Gallery container */
+.gallery-container {
+  position: relative;
+  width: 900px; /* 3 images x 300px */
+  margin: 0 auto;
+}
+/* Viewport: only 900px visible */
+.viewport {
+  overflow: hidden;
+  width: 900px;
+}
+/* Image grid: horizontal layout without wrapping */
+.gallery-container .viewport .image-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.3s ease;
+}
+/* Each image item is 300px wide */
+.gallery-container .viewport .image-item {
+  flex: 0 0 300px;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.gallery-container .viewport .image-item img {
+  width: 100%;
+  display: block;
+  border: 1px solid #ccc;
+}
+/* Navigation buttons */
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2;
+}
+.gallery-nav.prev {
+  left: 0;
+}
+.gallery-nav.next {
+  right: 0;
+}
+
+/* --- Accueil Section --- */
+.accueil-photo {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Gallery Container --- */
+.gallery-container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.image-grid {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+/* Default: 3 images per view */
+.image-item {
+  flex: 0 0 calc(100% / 3);
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.image-item img {
+  width: 100%;
+  display: block;
+  border: 1px solid #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* 2 images per view on tablet-sized screens */
+  .image-item {
+    flex: 0 0 calc(100% / 2);
+  }
+}
+
+@media (max-width: 480px) {
+  /* 1 image per view on small screens */
+  .image-item {
+    flex: 0 0 100%;
+  }
 }
