@@ -1,28 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coming Soon</title>
+  <title>Jerada : Une Ville de Patrimoine et de Culture</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Coming Soon</h1>
-    <p>Our website is under construction. Stay tuned for something awesome!</p>
-    
-    <!-- Optional: Email subscription form -->
-    <div class="subscribe">
-      <input type="email" placeholder="Enter your email" aria-label="Email address">
-      <button>Notify Me</button>
+  <!-- En-tête -->
+  <header>
+    <div class="header-content">
+      <h1>Jerada : Une Ville de Patrimoine et de Culture</h1>
+      <p>Découvrez l'histoire, la beauté et la vie de notre chère ville.</p>
     </div>
-    
-    <!-- Optional: Social links -->
-    <div class="social-links">
-      <a href="#" target="_blank">Facebook</a>
-      <a href="#" target="_blank">Twitter</a>
-      <a href="#" target="_blank">Instagram</a>
-    </div>
-  </div>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#histoire">Histoire</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+        <li><a href="#communaute">Communauté</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenu principal -->
+  <main>
+    <!-- Section Accueil -->
+    <section id="accueil">
+      <h2>Bienvenue à Jerada</h2>
+      <p>
+        Jerada est une ville riche en histoire et traditions. De ses ruelles anciennes et de son architecture emblématique à la chaleur de ses habitants, notre ville raconte une histoire faite de rencontres, de migrations et d'évolutions culturelles.
+      </p>
+    </section>
+
+    <!-- Section Histoire -->
+    <section id="histoire">
+      <h2>Histoire et Patrimoine</h2>
+      <article>
+        <h3>Une Ville aux Multiples Visages</h3>
+        <p>
+          Autrefois marquée par l'activité minière – qui a contribué au développement économique – Jerada se distingue aujourd'hui par la richesse de son patrimoine culturel et social. Les anciens quartiers, les établissements scolaires et les espaces publics témoignent d'une histoire faite d'efforts, de traditions et d'une vie communautaire animée.
+        </p>
+        <p>
+          Les récits des anciens, les photos d'époque et les archives locales permettent de se replonger dans un passé qui continue d'inspirer l'avenir de la ville.
+        </p>
+      </article>
+    </section>
+
+    <!-- Section Galerie -->
+    <section id="galerie">
+      <h2>Galerie de Photos</h2>
+      <div class="image-grid">
+        <!-- Remplacez ces chemins par vos propres images -->
+        <div class="image-item">
+          <img src="images/jerada_ville.jpg" alt="Vue générale de Jerada">
+        </div>
+        <div class="image-item">
+          <img src="images/jerada_marche.jpg" alt="Marché animé de Jerada">
+        </div>
+        <div class="image-item">
+          <img src="images/jerada_ecole.jpg" alt="Patrimoine éducatif de Jerada">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Communauté -->
+    <section id="communaute">
+      <h2>Communauté et Témoignages</h2>
+      <p>
+        Les habitants de Jerada, anciens et actuels, ont à cœur de partager leurs souvenirs et anecdotes. Retrouvez ici des témoignages émouvants et authentiques qui illustrent la vie quotidienne, les fêtes, les traditions et l'hospitalité qui font la renommée de notre ville.
+      </p>
+      <p>
+        <a href="https://www.youtube.com/watch?v=Yb2O_A1r4A4" target="_blank">Regarder une vidéo sur Jerada</a>
+      </p>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Pour partager vos souvenirs, vos photos ou pour toute question concernant Jerada, n'hésitez pas à nous contacter via le formulaire ci-dessous.
+      </p>
+      <form action="#" method="post">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer>
+    <p>&copy; 2025 Jerada - Ville de Mémoire et d'Avenir. Tous droits réservés.</p>
+  </footer>
 </body>
 </html>
