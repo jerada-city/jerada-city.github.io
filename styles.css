@@ -1,82 +1,130 @@
-/* Reset basic styles */
+/* Réinitialisation */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body, html {
-  height: 100%;
-  font-family: Arial, sans-serif;
-}
-
+/* Corps de page */
 body {
-  background: #f4f4f4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Container styling */
-.container {
-  text-align: center;
-  background: #fff;
-  padding: 40px 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-/* Heading and paragraph */
-h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
   color: #333;
 }
 
-p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: #666;
-}
-
-/* Subscription form styling */
-.subscribe {
-  margin-bottom: 30px;
-}
-
-.subscribe input[type="email"] {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 250px;
-}
-
-.subscribe button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  background: #333;
+/* En-tête */
+header {
+  background-color: #333;
   color: #fff;
-  border-radius: 5px;
-  margin-left: 10px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  padding: 20px 10px;
+  text-align: center;
+}
+.header-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+.header-content p {
+  font-size: 1.2em;
 }
 
-.subscribe button:hover {
-  background: #555;
+/* Navigation */
+nav {
+  margin-top: 15px;
 }
-
-/* Social links styling */
-.social-links a {
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+nav ul li a {
   text-decoration: none;
-  color: #333;
-  margin: 0 10px;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+nav ul li a:hover {
+  background-color: #555;
 }
 
-.social-links a:hover {
-  color: #555;
+/* Contenu principal */
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+}
+
+/* Sections */
+section {
+  margin-bottom: 40px;
+}
+section h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+section p {
+  margin-bottom: 15px;
+  padding: 0 10px;
+}
+
+/* Galerie */
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.image-item {
+  flex: 1 1 300px;
+  max-width: 300px;
+}
+.image-item img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+/* Formulaire de contact */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form label {
+  font-weight: bold;
+}
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form button {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+form button:hover {
+  background-color: #555;
+}
+
+/* Pied de page */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
 }
