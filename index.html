@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jerada : Une Ville de Patrimoine et de Culture</title>
-  <link rel="icon" type="image/x-icon" href="images/coal.ico?">
+  <link rel="icon" type="image/x-icon" href="images/coal.ico">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,7 +24,7 @@
       </ul>
     </nav>
   </header>
-
+  
   <!-- Contenu principal -->
   <main>
     <!-- Section Accueil -->
@@ -33,9 +33,9 @@
       <p>
         Jerada est une ville riche en histoire et traditions. De ses ruelles anciennes et de son architecture emblématique à la chaleur de ses habitants, notre ville raconte une histoire faite de rencontres, de migrations et d'évolutions culturelles.
       </p>
-      <img src="images/jerada_bienvenue.jpg" alt="Photo de bienvenue à Jerada" class="images/accueil-photo.jpg">
+      <img src="images/jerada_bienvenue.jpg" alt="Photo de bienvenue à Jerada" class="accueil-photo">
     </section>
-
+    
     <!-- Section Histoire -->
     <section id="histoire">
       <h2>Histoire et Patrimoine</h2>
@@ -49,24 +49,36 @@
         </p>
       </article>
     </section>
-
+    
     <!-- Section Galerie -->
     <section id="galerie">
       <h2>Galerie de Photos</h2>
-      <div class="image-grid">
-        <!-- Remplacez ces chemins par vos propres images -->
-        <div class="image-item">
-          <img src="images/jerada_ville.jpg" alt="Vue générale de Jerada">
+      <div class="gallery-container">
+        <button class="gallery-nav prev">&#10094;</button>
+        <div class="viewport">
+          <div class="image-grid">
+            <!-- 5 images; only 3 are visible at a time -->
+            <div class="image-item">
+              <img src="images/jerada_ville2.jpg" alt="Image 1">
+            </div>
+            <div class="image-item">
+              <img src="images/jerada_ville.jpeg" alt="Image 2">
+            </div>
+            <div class="image-item">
+              <img src="images/jerada_ville3.jpg" alt="Image 3">
+            </div>
+            <div class="image-item">
+              <img src="images/jerada_ville4.jpg" alt="Image 4">
+            </div>
+            <div class="image-item">
+              <img src="images/jerada_ville5.jpg" alt="Image 5">
+            </div>
+          </div>
         </div>
-        <div class="image-item">
-          <img src="images/jerada_marche.jpg" alt="Marché animé de Jerada">
-        </div>
-        <div class="image-item">
-          <img src="images/jerada_ecole.jpg" alt="Patrimoine éducatif de Jerada">
-        </div>
+        <button class="gallery-nav next">&#10095;</button>
       </div>
     </section>
-
+    
     <!-- Section Communauté -->
     <section id="communaute">
       <h2>Communauté et Témoignages</h2>
@@ -77,14 +89,14 @@
         <a href="https://www.youtube.com/watch?v=LTFrgTI4aIc&ab_channel=Francois1816" target="_blank">Regarder une vidéo sur Jerada</a>
       </p>
     </section>
-
+    
     <!-- Section Contact -->
     <section id="contact">
       <h2>Contact</h2>
       <p>
         Pour partager vos souvenirs, vos photos ou pour toute question concernant Jerada, n'hésitez pas à nous contacter via le formulaire ci-dessous.
       </p>
-      <form action="#" method="post">
+      <form action="mailto:nawal_14@outlook.fr" method="post" enctype="text/plain">
         <label for="nom">Nom :</label>
         <input type="text" id="nom" name="nom" required>
         <label for="email">Email :</label>
@@ -95,10 +107,12 @@
       </form>
     </section>
   </main>
-
+  
   <!-- Pied de page -->
   <footer>
     <p>&copy; 2025 Jerada - Ville de Mémoire et d'Avenir. Tous droits réservés.</p>
   </footer>
+  
+  <script src="script.js"></script>
 </body>
 </html>
