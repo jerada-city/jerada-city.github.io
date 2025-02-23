@@ -220,3 +220,61 @@ footer {
     flex: 0 0 100%;
   }
 }
+
+
+
+/* Overall testimonials section styling */
+#communaute {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Individual testimonial section styling */
+.testimonial-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Header of each testimonial */
+.testimonial-section header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.testimonial-section header h3 {
+  font-size: 1.8em;
+  margin: 0;
+}
+
+/* Testimonial image styling */
+.testimonial-section img {
+  display: block;
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+}
+
+/* Testimonial text styling */
+.testimonial-text p {
+  margin: 10px 0;
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 1em;
+}
+
+/* Link styling within the community section */
+#communaute a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+#communaute a:hover {
+  text-decoration: underline;
+}
