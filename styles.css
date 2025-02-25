@@ -285,3 +285,104 @@ footer {
 #communaute a:hover {
   text-decoration: underline;
 }
+
+
+
+
+
+
+
+
+
+
+/* Overall Community Section */
+#communaute {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+  margin: 40px auto;
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Testimonial Section Header */
+.testimonial-section header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.testimonial-section header h3 {
+  font-size: 2em;
+  margin: 0;
+}
+
+/* Testimonial Content Layout */
+.testimonial-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Main Info Block */
+.testimonial-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.testimonial-info img {
+  border-radius: 50%;
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
+.testimonial-info .description {
+  max-width: 800px;
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 1em;
+}
+
+/* Testimonial Gallery */
+.testimonial-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.testimonial-gallery figure {
+  margin: 0;
+  text-align: center;
+}
+.testimonial-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.testimonial-gallery figcaption {
+  margin-top: 8px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* Link Styling */
+#communaute a {
+  color: #0073e6;
+  text-decoration: none;
+}
+#communaute a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .testimonial-content {
+    gap: 20px;
+  }
+}
+
+
