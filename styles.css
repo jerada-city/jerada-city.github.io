@@ -50,6 +50,37 @@ nav ul li a:hover {
   background-color: #555;
 }
 
+/* Cheers Section Styling */
+.cheers-section {
+  background-color: #f8f8f8;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 40px;
+}
+
+.cheers-message p {
+  font-size: 1.5em;
+  font-style: italic;
+  color: #333;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .cheers-section {
+    padding: 30px 15px;
+  }
+
+  .cheers-message p {
+    font-size: 1.2em;
+    padding: 0 10px;
+  }
+}
+
 /* Contenu principal */
 main {
   max-width: 1200px;
@@ -79,11 +110,10 @@ section p {
 }
 
 .image-item img {
-  width: 300px;      /* Set desired width */
-  height: 200px;     /* Set desired height */
-  object-fit: cover; /* Ensures the image covers the area without distortion */
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
 }
-
 
 /* Formulaire de contact */
 form {
@@ -129,7 +159,7 @@ footer {
 /* Gallery container */
 .gallery-container {
   position: relative;
-  width: 900px; /* 3 images x 300px */
+  width: 900px;
   margin: 0 auto;
 }
 /* Viewport: only 900px visible */
@@ -228,8 +258,6 @@ footer {
   }
 }
 
-
-
 /* Overall testimonials section styling */
 #communaute {
   max-width: 1200px;
@@ -285,15 +313,6 @@ footer {
 #communaute a:hover {
   text-decoration: underline;
 }
-
-
-
-
-
-
-
-
-
 
 /* Overall Community Section */
 #communaute {
@@ -385,8 +404,6 @@ footer {
   }
 }
 
-
-
 /* Testimonial Image Styling */
 .testimonial-image {
   margin: 30px 0;
@@ -417,4 +434,3 @@ footer {
     height: auto;
   }
 }
-
