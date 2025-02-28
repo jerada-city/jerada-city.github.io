@@ -494,3 +494,86 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+/* ----------------- SCROLLABLE GALLERY STYLES ----------------- */
+/* Gallery container */
+.gallery-container {
+  position: relative;
+  width: 100%; /* Full width for responsiveness */
+  max-width: 900px; /* Adjust based on your design */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Viewport: only visible area */
+.viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Image grid: horizontal layout without wrapping */
+.image-grid {
+  display: flex;
+  transition: transform 0.3s ease;
+  gap: 2px; /* Space between images */
+}
+
+/* Each image item */
+.image-item {
+  flex: 0 0 500px; /* Width of each image item (increase as needed) */
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+/* Image styling */
+.image-item img {
+  width: 100%; /* Make images fill their container */
+  height: 200px; /* Fixed height for uniformity (adjust as needed) */
+  object-fit: cover; /* Ensures images fill the space without distortion */
+  border: 1px solid #ccc;
+  border-radius: 6px; /* Optional: rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for images */
+.image-item img:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Navigation buttons */
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2;
+}
+.gallery-nav.prev {
+  left: 0;
+}
+.gallery-nav.next {
+  right: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* 2 images per view on tablet-sized screens */
+  .image-item {
+    flex: 0 0 calc(50% - 10px); /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  /* 1 image per view on small screens */
+  .image-item {
+    flex: 0 0 100%; /* Full width on mobile */
+  }
+}
