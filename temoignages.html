@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Témoignages - Jerada</title>
+  <link rel="icon" type="image/x-icon" href="images/coal.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Témoignages</h1>
+      <p>Les souvenirs et anecdotes des habitants de Jerada.</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="charbonnage.html">Charbonnage</a></li>
+        <li><a href="temoignages.html">Témoignages</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Section Communauté -->
+    <section id="communaute">
+        <h2>Communauté et Témoignages</h2>
+        <p>
+          Un grand merci à <a href="https://web.archive.org/web/20230827192224/http://anciens-de-jerada.monsite-orange.fr/" target="_blank">Denis Delforn</a> pour nous avoir généreusement fourni le contenu.
+        </p>
+        <p>
+          Les habitants de Jerada, anciens et actuels, partagent ici leurs souvenirs et anecdotes.
+        </p>
+  
+        
+  
+        <p>
+          <a href="https://www.youtube.com/watch?v=LTFrgTI4aIc&ab_channel=Francois1816" target="_blank">
+            Regarder une vidéo sur Jerada
+          </a>
+        </p>
+      </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jerada - Ville de Mémoire et d'Avenir. Tous droits réservés.</p>
+  </footer>
+  <script>
+    // Array of testimonial file paths
+    const testimonialFiles = [
+      'testimonials/denis_delforn.html',
+      'testimonials/daniel_herrmann.html',
+      'testimonials/autre.html',
+      'testimonials/lahcen_elbourimi.html'
+    ];
+
+    // Function to load testimonials
+    async function loadTestimonials() {
+      const container = document.getElementById('communaute');
+      for (const file of testimonialFiles) {
+        const response = await fetch(file);
+        const content = await response.text();
+        container.innerHTML += content;
+      }
+    }
+
+    // Load testimonials when the page loads
+    window.onload = loadTestimonials;
+  </script>
+</body>
+</html>

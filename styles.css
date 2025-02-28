@@ -434,3 +434,63 @@ footer {
     height: auto;
   }
 }
+
+
+
+/* ----------------- CHARBONNAGE IMAGE GALLERY STYLES ----------------- */
+
+/* Gallery Container */
+.charbonnage-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 40px 0;
+}
+
+/* Individual Image Container */
+.charbonnage-gallery figure {
+  margin: 0;
+  text-align: center;
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Images */
+.charbonnage-gallery figure:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.charbonnage-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Caption Styling */
+.charbonnage-gallery figcaption {
+  font-size: 0.95em;
+  color: #555;
+  font-style: italic;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .charbonnage-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .charbonnage-gallery {
+    grid-template-columns: 1fr;
+  }
+}
