@@ -698,8 +698,17 @@ footer {
 .lightbox-content {
   margin: auto;
   display: block;
-  max-width: 80%;
+  max-width: 90%;
   max-height: 80%;
+  border-radius: 10px;
+}
+
+.lightbox-caption {
+  text-align: center;
+  font-style: italic;
+  color: #fff;
+  margin-top: 10px;
+  font-size: 1.2em;
 }
 
 .close {
@@ -716,7 +725,6 @@ footer {
 .close:hover {
   color: #bbb;
 }
-
 
 
 /* Modern and Historical Galleries */

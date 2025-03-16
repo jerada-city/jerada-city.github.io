@@ -47,13 +47,23 @@ window.addEventListener('resize', () => {
 // Lightbox functionality
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
+const lightboxCaption = document.getElementById('lightbox-caption');
 const closeBtn = document.querySelector('.close');
 
 // Open lightbox when an image is clicked
-document.querySelectorAll('.historical-item img, .image-item img, .memory-item img').forEach(img => {
+document.querySelectorAll('.gallery-item img').forEach(img => {
   img.addEventListener('click', () => {
     lightbox.style.display = 'block';
     lightboxImg.src = img.src;
+
+    // Check if a caption exists
+    const caption = img.nextElementSibling;
+    if (caption && caption.classList.contains('caption')) {
+      lightboxCaption.textContent = caption.textContent; // Display caption
+      lightboxCaption.style.display = 'block';
+    } else {
+      lightboxCaption.style.display = 'none'; // Hide caption if none exists
+    }
   });
 });
 
