@@ -62,36 +62,84 @@
     
     <!-- Section Galerie -->
     <section id="galerie">
-      <h2>Galerie de Photos</h2>
-      <div class="gallery-container">
-        <button class="gallery-nav prev">&#10094;</button>
-        <div class="viewport">
-          <div class="image-grid">
-            <!-- 5 images; only 3 are visible at a time -->
-            <div class="image-item">
-              <img src="images/jerada_ville2.jpg" alt="Image 1">
-            </div>
-            <div class="image-item">
-              <img src="images/jerada_ville.jpeg" alt="Image 2">
-            </div>
-            <div class="image-item">
-              <img src="images/jerada_ville3.jpg" alt="Image 3">
-            </div>
-            <div class="image-item">
-              <img src="images/forno.jpg" alt="Image 4">
-            </div>
-            <div class="image-item">
-              <img src="images/machaar_haram.jpg" alt="Image 5">
-            </div>
-            <div class="image-item">
-              <img src="images/jerada_ville6.jpg" alt="Image 6">
-            </div>
+      <h2>Jerada Aujourd'hui</h2>
+      <div class="modern-gallery">
+        <div class="gallery-grid">
+          <!-- Modern Jerada Images -->
+          <div class="gallery-item">
+            <img src="images/jerada_ville2.jpg" alt="Vues générales de Jerada aujourd'hui">
+            <p class="caption">Vue générale de Jerada</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/jerada_ville.jpeg" alt="La Medina aujourd'hui">
+            <p class="caption">Vue générale de Jerada</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/jerada_ville3.jpg" alt="L'école professionnelle aujourd'hui">
+            <p class="caption">Vue générale de Jerada</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/forno.jpg" alt="Forno">
+            <p class="caption">Forno</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/machaar_haram.jpg" alt="Machaar Haram aujourd'hui">
+            <p class="caption">Machaar Haram</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/jerada_ville6.jpg" alt="Rue principale aujourd'hui">
+            <p class="caption">Rue principale</p>
           </div>
         </div>
-        <button class="gallery-nav next">&#10095;</button>
+      </div>
+
+      <h2>Jerada dans les Années 1955-1962</h2>
+      <div class="historical-gallery">
+        <div class="gallery-grid">
+          <!-- Historical Jerada Images -->
+          <div class="gallery-item">
+            <img src="images/history/01_00_010_Jerada.JPG" alt="Vues générales de Jerada (1955-1962)">
+            <p class="caption">Vue générale de Jerada (1955-1962)</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/history/01_00_015_Jerada.jpg" alt="La Medina (1955-1962)">
+            <p class="caption">Vue générale de Jerada (1955-1962)</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/history/01_00_030_Jerada.JPG" alt="L'école professionnelle (1955-1962)">
+            <p class="caption">Vue générale de Jerada (1955-1962)</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/history/01_00_035_Jerada.JPG" alt="L'entrée de la mine (1955-1962)">
+            <p class="caption">Vue générale de Jerada (1955-1962)</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/history/01_00_036_Jerada_Medina.JPG" alt="La Medina">
+            <p class="caption">La Medina (1955-1962)</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/history/01_00_190_Jerada_Fantasia3.JPG" alt="Fantasia à Jerada (1955-1962)">
+            <p class="caption">Fantasia à Jerada (1955-1962)</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/history/01_00_037_Jerada.JPG" alt="L'entrée de la mine (1955-1962)">
+            <!--<p class="caption">L'entrée de la mine (1955-1962)</p>-->
+          </div>
+          <div class="gallery-item">
+            <img src="images/history/01_00_040_Jerada_Souk1.JPG" alt="Le Souk (1955-1962)">
+            <p class="caption">Le Souk (1955-1962)</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/history/01_00_050_Jerada_Souk2.JPG" alt="Le Souk (1955-1962)">
+            <p class="caption">Le Souk (1955-1962)</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/history/01_00_060_Jerada_Souk3.JPG" alt="Le Souk (1955-1962)">
+            <p class="caption">Le Souk (1955-1962)</p>
+          </div>
+        </div>
       </div>
     </section>
-    
     
     <!-- Section Contact -->
     <section id="contact">
@@ -112,9 +160,15 @@
 
   </main>
   
-  <!-- Pied de page -->
+  <!-- Pied de page avec crédits -->
   <footer>
-    <p>&copy; 2025 Jerada - Ville de Mémoire et d'Avenir. Tous droits réservés.</p>
+    <div class="footer-content">
+      <p>&copy; 2025 Jerada - Ville de Mémoire et d'Avenir. Tous droits réservés.</p>
+      <p class="credits">
+        <strong>Crédits :</strong> Ce site a été créé avec passion par Naoual Smaili.
+        Un grand merci à tous ceux qui ont contribué à ce projet, en partageant leurs souvenirs, leurs photos et leur soutien.
+      </p>
+    </div>
   </footer>
   
   <script src="script.js"></script>
@@ -140,6 +194,10 @@
     // Load testimonials when the page loads
     window.onload = loadTestimonials;
   </script>
-
+  
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
 </body>
 </html>
