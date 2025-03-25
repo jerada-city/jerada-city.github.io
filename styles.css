@@ -809,3 +809,74 @@ footer {
 .credits strong {
   color: #3498db; /* Highlight color for emphasis */
 }
+
+
+
+/* Minimalist Video Links */
+.testimonial-videos {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+.video-links {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.video-links li {
+  margin-bottom: 0.8rem;
+}
+
+.video-links a {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  background: white;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
+}
+
+.video-links a:hover {
+  background: #f0f0f0;
+  transform: translateX(3px);
+}
+
+.video-icon {
+  color: #ff0000;
+  margin-right: 12px;
+  font-size: 1.1rem;
+}
+
+.video-title {
+  font-weight: 500;
+}
+
+.external-links {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.external-links ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.external-links li {
+  margin: 0.6rem 0;
+}
+
+.external-links a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.external-links a:hover {
+  text-decoration: underline;
+}
