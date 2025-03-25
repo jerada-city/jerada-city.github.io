@@ -880,3 +880,14 @@ footer {
 .external-links a:hover {
   text-decoration: underline;
 }
+
+
+/* Grouping the three Vornay class photos */
+.testimonial-image:nth-child(1),
+.testimonial-image:nth-child(2),
+.testimonial-image:nth-child(3) {
+    display: inline-block;
+    width: 30%;
+    margin: 0 1.5%;
+    vertical-align: top;
+}
