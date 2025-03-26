@@ -179,28 +179,5 @@
   </div>
 
   <script src="script.js"></script>
-  <script>
-    // Array of testimonial file paths
-    const testimonialFiles = [
-      'testimonials/denis_delforn.html',
-      'testimonials/daniel_herrmann.html',
-      'testimonials/lahcen_elbourimi.html',
-      'testimonials/autre.html'
-    ];
-
-    // Function to load testimonials
-    async function loadTestimonials() {
-      const container = document.getElementById('communaute');
-      for (const file of testimonialFiles) {
-        const response = await fetch(file);
-        const content = await response.text();
-        container.innerHTML += content;
-      }
-    }
-
-    // Load testimonials when the page loads
-    window.onload = loadTestimonials;
-  </script>
-  
 </body>
 </html>
