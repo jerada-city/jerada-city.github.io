@@ -3,15 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Charbonnage du Maroc - Jerada</title>
+  <title>Histoire des Charbonnages du Maroc - Jerada</title>
   <link rel="icon" type="image/x-icon" href="images/coal.ico">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .timeline {
+      margin: 40px 0;
+      position: relative;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      background: #333;
+    }
+    .timeline-item {
+      padding: 20px;
+      margin-bottom: 30px;
+      width: 45%;
+      position: relative;
+    }
+    .timeline-item:nth-child(odd) {
+      float: left;
+      clear: right;
+      text-align: right;
+    }
+    .timeline-item:nth-child(even) {
+      float: right;
+      clear: left;
+      text-align: left;
+    }
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #333;
+      border-radius: 50%;
+      top: 20px;
+    }
+    .timeline-item:nth-child(odd)::after {
+      right: -30px;
+    }
+    .timeline-item:nth-child(even)::after {
+      left: -30px;
+    }
+    .timeline-year {
+      font-weight: bold;
+      color: #d35400;
+    }
+    .full-width-img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      margin: 20px 0;
+    }
+    .two-column {
+      display: flex;
+      gap: 20px;
+    }
+    .two-column img {
+      width: 50%;
+    }
+    .quote {
+      font-style: italic;
+      border-left: 3px solid #d35400;
+      padding-left: 15px;
+      margin: 20px 0;
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="header-content">
-      <h1>Charbonnage du Maroc</h1>
-      <p>L'histoire minière de Jerada.</p>
+      <h1>Histoire des Charbonnages du Maroc</h1>
+      <p>L'épopée minière de Jerada (1927-2000)</p>
     </div>
     <nav>
       <ul>
@@ -23,70 +91,170 @@
   </header>
 
   <main>
-    <section>
-      <h2>Le Charbonnage du Maroc : L'Épopée Minière de Jerada</h2>
-      <p>
-        L'histoire de Jerada est profondément liée à l'industrie minière, en particulier à l'extraction du charbon. Les mines de charbon de Jerada, exploitées dès le début du 20e siècle, ont joué un rôle clé dans le développement économique de la région et du Maroc.
-      </p>
-      <p>
-        <strong>La Société des Charbonnages du Maroc (CDM)</strong>, fondée en 1930 sous le nom de Société Chérifienne des Charbonnages de Djérada, a été l'acteur principal de cette industrie. Centrée sur l'exploitation du bassin houiller de Jerada, dans la région de l'Oriental, la CDM a extrait principalement de l'anthracite de haute qualité, un charbon très prisé pour son pouvoir calorifique.
-      </p>
-      <p>
-        Pendant des décennies, les mines de Jerada ont été parmi les plus importantes du pays, fournissant du charbon pour alimenter les centrales électriques, les industries locales et les chemins de fer. L'activité minière a été le pilier de l'économie locale, offrant des emplois à des milliers de personnes et contribuant au développement de la région.
-      </p>
-      <p>
-        Cependant, à la fin du 20e siècle, l'industrie du charbon a commencé à décliner. L'épuisement des réserves, les coûts d'exploitation élevés et la concurrence internationale ont rendu l'extraction de moins en moins viable. En 1998, les mines de Jerada ont officiellement fermé, marquant la fin d'une ère et laissant de nombreux ouvriers sans emploi.
-      </p>
+    <section class="hero">
+      <img src="images/mine/hero.jpg" alt="Vue aérienne des mines de Jerada" class="full-width-img">
+      <h2>Jerada: Le Poumon Charbonnier du Maroc</h2>
+      <p>Pendant plus de 70 ans, Jerada a été le cœur battant de l'industrie charbonnière marocaine, façonnant le destin économique et social de toute une région.</p>
     </section>
 
-    <!-- Image Gallery Section -->
     <section>
-      <h2>Galerie des Mines de Jerada</h2>
-      <div class="charbonnage-gallery">
-        <!-- Image 1 -->
-        <figure>
-          <img src="images/mine/mine1.jpg" alt="Hassan deux">
-          <figcaption>Sa majesté le Roi Hassan II en tenue de mineur 1961</figcaption>
-        </figure>
-
-        <!-- Image 2 -->
-        <figure>
-          <img src="images/mine/mine2.jpg" alt="Travailleurs dans les mines">
-          <figcaption>Les travailleurs des mines de Jerada dans les années 1950.</figcaption>
-        </figure>
-
-        <!-- Image 3 -->
-        <figure>
-          <img src="images/mine/mine3.jpg" alt="Machines minières">
-          <figcaption>Machines utilisées pour l'extraction du charbon.</figcaption>
-        </figure>
-
-        <figure>
-          <img src="images/mine/mine4.jpg" alt="Logo de la Société des Charbonnages du Maroc">
-          <figcaption>Logo de la Société des Charbonnages du Maroc.</figcaption>
-        </figure>
-
-        <figure>
-          <img src="images/mine/mine5.jpg" alt="Mine de charbon à Jerada">
-          <figcaption>Une vue des anciennes mines de charbon de Jerada.</figcaption>
-        </figure>
-
-        <figure>
-          <img src="images/mine/18_00_170_Molinier.jpg" alt="Mine de charbon à Jerada">
-          <figcaption>Image fournie par Catherine Molinier</figcaption>
-        </figure>
-
-        <figure>
-          <img src="images/mine/18_00_180_Molinier.jpg" alt="Mine de charbon à Jerada">
-          <figcaption>Image fournie par Catherine Molinier</figcaption>
-        </figure>
-        
-        <!-- Add more images as needed -->
+      <h2>La Découverte du Gisement</h2>
+      <div class="two-column">
+        <div>
+          <p>L'histoire commence en <strong>1908</strong> lorsque le géologue Louis Gentil identifie des formations carbonifères près d'Oujda. Mais c'est en <strong>janvier 1927</strong> que des géologues de la société belge Ougrée-Marihaye découvrent un riche filon de charbon à Jerada.</p>
+          <p>Cette découverte intervient alors que la France cherche à développer des sources d'énergie locales pour réduire sa dépendance aux importations et alimenter les industries et chemins de fer de la région du Maghreb.</p>
+        </div>
+        <img src="images/mine/geologists.jpg" alt="Géologues étudiant le sol">
       </div>
+    </section>
+
+    <section>
+      <img src="images/mine/early_days.jpg" alt="Premières installations minières à Jerada" class="full-width-img">
+      <h2>Création des Charbonnages (1929-1936)</h2>
+      <p>Pour exploiter ce gisement prometteur, une entreprise mixte est fondée en <strong>1929</strong> : la Société chérifienne des charbonnages de Djéralda, constituée avec une participation du gouvernement marocain (alors sous protectorat) aux côtés d'intérêts français et belges.</p>
+      <p>L'anthracite de très haute qualité de Jerada (fort pouvoir calorifique, peu de cendres) est un combustible de choix pour le chauffage domestique et industriel.</p>
+      
+      <div class="quote">
+        "Jerada possède des possibilités énormes d'extraction" - Rapport colonial français, années 1930
+      </div>
+
+      <p>Les débuts sont modestes avec seulement 15,000 tonnes produites en 1932. En <strong>1934</strong>, un téléphérique de 22 km relie la mine à la gare de Guenfouda, permettant le véritable démarrage industriel en <strong>1936</strong> avec les premières expéditions significatives.</p>
+    </section>
+
+    <section>
+      <h2>L'Âge d'Or (1940-1970)</h2>
+      <div class="two-column">
+        <img src="images/mine/workers_1940s.jpg" alt="Mineurs dans les années 1940">
+        <div>
+          <p>Pendant la Seconde Guerre mondiale, la production locale est encouragée :</p>
+          <ul>
+            <li>100,000 tonnes en 1943</li>
+            <li>222,000 tonnes en 1946</li>
+          </ul>
+          <p>En <strong>1946</strong>, la compagnie devient les Charbonnages Nord-Africains (CNA), cogérés par la France, la Belgique et le Maroc.</p>
+          <p>Jerada devient un foyer du syndicalisme marocain, accueillant en décembre 1946 l'un des premiers congrès des travailleurs des mines.</p>
+        </div>
+      </div>
+
+      <img src="images/mine/train.jpg" alt="Train minéralier de Jerada" class="full-width-img">
+      <p>Après l'indépendance en <strong>1956</strong>, le Maroc prend progressivement le contrôle :</p>
+      <ul>
+        <li><strong>1957</strong> : Rachat des parts françaises (48% marocain)</li>
+        <li><strong>1964</strong> : Contrôle majoritaire (54%)</li>
+        <li><strong>1972</strong> : 99% du capital détenu par le Maroc</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Apogée Industriel (1970s)</h2>
+      <div class="two-column">
+        <div>
+          <p>Les années 1970 marquent l'apogée de Jerada :</p>
+          <ul>
+            <li>Construction d'une centrale thermique soviétique (165 MW)</li>
+            <li>Production record de 700,000 tonnes en 1977</li>
+            <li>Deuxième plus gros employeur du Maroc</li>
+            <li>Population de 60,000 habitants</li>
+          </ul>
+          <p>La centrale consomme jusqu'à 700,000 tonnes de charbon annuellement, alimentant toute la région.</p>
+        </div>
+        <img src="images/mine/power_plant.jpg" alt="Centrale thermique de Jerada">
+      </div>
+    </section>
+
+    <section>
+      <img src="images/mine/late_years.jpg" alt="Mineurs dans les années 1980" class="full-width-img">
+      <h2>Le Déclin (1980-2000)</h2>
+      <p>Plusieurs facteurs mènent au déclin :</p>
+      <ul>
+        <li>Gisement plus profond et difficile d'accès</li>
+        <li>Coût d'extraction élevé face au charbon importé</li>
+        <li>Pertes financières chroniques</li>
+        <li>Productivité en baisse (800 kg/homme-poste dans les années 1980)</li>
+      </ul>
+      
+      <div class="quote">
+        "La mine ferme, les damnés de la silicose restent" - Témoignage d'un ancien mineur
+      </div>
+
+      <p>Malgré des tentatives de modernisation dans les années 1980-90, la fermeture devient inévitable.</p>
+    </section>
+
+    <section>
+      <h2>La Fin d'une Ère (17 juillet 2000)</h2>
+      <p>En <strong>1998</strong>, le gouvernement annonce la fermeture définitive. L'extraction cesse le <strong>17 juillet 2000</strong> :</p>
+      <ul>
+        <li>5,500 à 9,000 emplois perdus</li>
+        <li>Exode économique (60,000 à 44,000 habitants en 10 ans)</li>
+        <li>Apparition de mines clandestines dangereuses</li>
+      </ul>
+      <img src="images/mine/closure.jpg" alt="Dernier jour des mines" class="full-width-img">
+    </section>
+
+    <section class="timeline">
+      <h2>Frise Chronologique</h2>
+      <div class="timeline-item">
+        <div class="timeline-year">1908</div>
+        <p>Identification des formations houillères par Louis Gentil</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1927</div>
+        <p>Découverte du gisement par des ingénieurs belges</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1929</div>
+        <p>Création de la Société chérifienne des Charbonnages</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1934</div>
+        <p>Mise en service du téléphérique de 22 km</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1936</div>
+        <p>Début de l'exploitation industrielle</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1946</div>
+        <p>Création des Charbonnages Nord-Africains (CNA)</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1952</div>
+        <p>Ouverture de la ligne ferroviaire Jerada-Guenfouda</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1956</div>
+        <p>Indépendance du Maroc</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1971-72</div>
+        <p>Construction de la centrale thermique</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1977</div>
+        <p>Pic de production (700,000 tonnes)</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1981</div>
+        <p>Renommage en Charbonnages du Maroc (CDM)</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1998</div>
+        <p>Décision de fermeture</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2000</div>
+        <p>Fermeture définitive (17 juillet)</p>
+      </div>
+      <div style="clear:both;"></div>
+    </section>
+
+    <section>
+      <h2>Héritage et Mémoire</h2>
+      <p>Jerada reste un symbole de l'industrie minière marocaine et du mouvement ouvrier. Aujourd'hui, des projets de réhabilitation et de diversification économique tentent de redonner vie à cette région marquée par son passé charbonnier.</p>
+      <img src="images/mine/today.jpg" alt="Jerada aujourd'hui" class="full-width-img">
     </section>
   </main>
 
-  <!-- Pied de page avec crédits -->
   <footer>
     <div class="footer-content">
       <p>&copy; 2025 Jerada - Ville de Mémoire et d'Avenir. Tous droits réservés.</p>
