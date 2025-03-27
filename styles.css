@@ -1040,25 +1040,3 @@ nav ul {
   padding: 15px;
 }
 
-/* Desktop Overrides */
-@media (min-width: 768px) {
-  /* Show tabs, hide dropdown */
-  .decade-tabs {
-    display: flex;
-  }
-  .mobile-decade-selector {
-    display: none;
-  }
-  
-  /* Gallery layout */
-  .scrollable-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    overflow-x: visible;
-  }
-  .scrollable-gallery figure {
-    flex: 1;
-  }
-
-  /* Other desktop styles... */
-}
