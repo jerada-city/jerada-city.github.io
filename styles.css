@@ -1065,13 +1065,12 @@ footer {
 .testimonial-section img,
 .testimonial-info img,
 .testimonial-image img {
-  max-width: 200px; /* Set your desired max width */
-  max-height: 200px; /* Set your desired max height */
+  max-width: 800px; /* Set your desired max width */
+  max-height: 800px; /* Set your desired max height */
   width: auto;
   height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 50%; /* Keep the circular shape if desired */
   object-fit: cover; /* Ensures images maintain aspect ratio */
 }
 
