@@ -1061,36 +1061,40 @@ footer {
 
 
 
-/* Add this to your CSS to standardize testimonial images */
-.testimonial-section img,
-.testimonial-info img,
+
+
+/* Target testimonial images in Yvon Goetz's section */
 .testimonial-image img {
-  max-width: 800px; /* Set your desired max width */
-  max-height: 800px; /* Set your desired max height */
-  width: auto;
-  height: auto;
+  max-width: 1000px; /* Maximum width */
+  max-height: 500px; /* Maximum height */
+  width: auto; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 4px; /* Small radius instead of circular */
   display: block;
-  margin: 0 auto;
-  object-fit: cover; /* Ensures images maintain aspect ratio */
+  margin: 0 auto 15px auto; /* Center the image and add space below */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional subtle shadow */
+  object-fit: contain; /* Ensures full image is visible */
 }
 
-/* For non-circular testimonial images (like those in galleries) */
-.testimonial-gallery img,
-.charbonnage-gallery img,
-.gallery-grid img {
-  max-width: 100%;
-  max-height: 300px; /* Adjust as needed */
-  height: auto;
-  width: auto;
-  object-fit: cover;
+/* Make sure captions look good with the images */
+.testimonial-image figcaption {
+  max-width: 1000px; /* Match image width */
+  margin: 0 auto; /* Center the caption */
+  padding: 10px 0;
+  font-size: 0.9em;
+  line-height: 1.4;
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-  .testimonial-section img,
-  .testimonial-info img,
+@media (max-width: 1100px) {
   .testimonial-image img {
-    max-width: 150px; /* Slightly smaller on mobile */
-    max-height: 150px;
+    max-width: 90%; /* Slightly smaller on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-image img {
+    max-width: 100%; /* Full width on mobile */
+    max-height: 400px; /* Slightly smaller height */
   }
 }
