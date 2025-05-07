@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Témoignages - Jerada</title>
+  <link rel="icon" type="image/x-icon" href="images/coal.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Témoignages</h1>
+      <p>Les souvenirs et anecdotes des habitants de Jerada.</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="charbonnage.html">Charbonnage</a></li>
+        <li><a href="temoignages.html">Témoignages</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Section Communauté -->
+    <section id="communaute">
+        <h2>Communauté et Témoignages</h2>
+        <p>
+          Un grand merci à <a href="https://web.archive.org/web/20230827192224/http://anciens-de-jerada.monsite-orange.fr/" target="_blank">Denis Delforn</a> pour nous avoir généreusement fourni le contenu.
+        </p>
+        <p>
+          Les habitants de Jerada, anciens et actuels, partagent ici leurs souvenirs et anecdotes.
+        </p>
+  
+        
+  
+        <p>
+          <a href="https://www.youtube.com/watch?v=LTFrgTI4aIc&ab_channel=Francois1816" target="_blank">
+            Regarder une vidéo sur Jerada
+          </a>
+        </p>
+      </section>
+  </main>
+
+  <!-- Pied de page avec crédits -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Jerada - Ville de Mémoire et d'Avenir. Tous droits réservés.</p>
+      <p class="credits">
+        <strong>Crédits :</strong> Ce site a été créé avec passion par Naoual Smaili.
+        Un grand merci à tous ceux qui ont contribué à ce projet, en partageant leurs souvenirs, leurs photos et leur soutien.
+      </p>
+    </div>
+  </footer>
+  <script>
+    // Array of testimonial file paths
+    const testimonialFiles = [
+      'testimonials/denis_delforn.html',
+      'testimonials/daniel_herrmann.html',
+      'testimonials/daniel_alberola.html',
+      'testimonials/francois_moya.html',
+      'testimonials/marie_laure_biales.html',
+      'testimonials/herve_melenchon.html',
+      'testimonials/monique_melenchon.html',
+      'testimonials/andree_francette_leclere.html',
+      'testimonials/salinas.html',
+      'testimonials/samir_boukili.html',
+      'testimonials/evelyne_ravoux.html',
+      'testimonials/catherine_molinier.html',
+      'testimonials/angelique_bouriez.html',
+      'testimonials/bernard_ramon.html',
+      'testimonials/suzanne_buchelet.html',
+      'testimonials/marie_lutor.html',
+      'testimonials/jean_marie_locci.html',
+      'testimonials/leleu.html',
+      'testimonials/christine_delbos.html',
+      'testimonials/denis_gonzalez_francine_cerdan.html',
+      'testimonials/thierry_seoane.html',
+      'testimonials/jean_claude_nordekoff.html',
+      'testimonials/marc_vinson.html',
+      'testimonials/claire_federici.html',
+      'testimonials/gilbert_flament.html',
+      'testimonials/abdelali_ezzahid.html',
+      'testimonials/abdelwahab_filali.html',
+      'testimonials/jany_viciana.html',
+      'testimonials/famille_mateille.html',
+      'testimonials/yvon_goetz.html',
+      'testimonials/alain_martinez.html',
+      'testimonials/lucien_canovas.html',
+      'testimonials/annette_lopez.html',
+      'testimonials/nicole_prieto.html',
+      'testimonials/genevieve_marteau.html',
+      'testimonials/corbi_monteagudo.html',
+      'testimonials/mohammed_raoudi.html',
+      'testimonials/robert_klistinec.html',
+      'testimonials/edwige_klavs.html',
+      'testimonials/albert_sartori.html',
+      'testimonials/tahar_scherifi.html',
+      'testimonials/claudie_teneur.html',
+      'testimonials/mangematin.html',
+      'testimonials/malita_paillard.html'
+      //'testimonials/autre.html'
+    ];
+
+    // Function to load testimonials
+    async function loadTestimonials() {
+      const container = document.getElementById('communaute');
+      for (const file of testimonialFiles) {
+        const response = await fetch(file);
+        const content = await response.text();
+        container.innerHTML += content;
+      }
+    }
+
+    // Load testimonials when the page loads
+    window.onload = loadTestimonials;
+  </script>
+</body>
+</html>
