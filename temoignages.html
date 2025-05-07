@@ -90,8 +90,7 @@
       display: flex;
       flex-direction: column;
       text-align: center;
-      justify-content: space-between; /* Distribute space evenly */
-      min-height: 250px; /* Set a minimum height */
+      height: 300px; /* Fixed height for all cards */
     }
 
     .card:hover {
@@ -101,25 +100,28 @@
 
     .card img {
       width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
-      flex-shrink: 0;
+      height: 160px; /* Fixed height for images */
+      object-fit: cover; /* Ensures the image covers the area without distortion */
     }
 
     .info {
       padding: 15px;
       flex-grow: 1; /* Allow the info section to grow and fill space */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Space out content evenly */
     }
 
     .info h3 {
       font-size: 1.2rem;
-      margin-bottom: 10px;
-      color: #222;
+      margin: 0; /* Remove margin to prevent overflow */
+      overflow: hidden; /* Hide overflow text */
+      text-overflow: ellipsis; /* Add ellipsis for overflow text */
+      white-space: nowrap; /* Prevent text from wrapping */
     }
 
     .more {
+      margin-top: auto; /* Push the "Voir plus" link to the bottom */
       color: #0073e6;
       font-weight: bold;
       font-size: 0.9rem;
