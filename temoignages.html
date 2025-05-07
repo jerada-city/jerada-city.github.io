@@ -90,6 +90,8 @@
       display: flex;
       flex-direction: column;
       text-align: center;
+      justify-content: space-between; /* Distribute space evenly */
+      min-height: 250px; /* Set a minimum height */
     }
 
     .card:hover {
@@ -108,6 +110,7 @@
 
     .info {
       padding: 15px;
+      flex-grow: 1; /* Allow the info section to grow and fill space */
     }
 
     .info h3 {
