@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Add click listeners to all images inside main content and galleries
-  const images = document.querySelectorAll('main img, .gallery-item img, .charbonnage-gallery img, .image-item img, .testimonial-image img');
+  const images = document.querySelectorAll('main img, .gallery-item img, .charbonnage-gallery img, .image-item img, .testimonial-image img, .card img');
 
   images.forEach(img => {
     img.style.cursor = 'zoom-in'; // Indicate clickability
