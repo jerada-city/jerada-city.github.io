@@ -1098,3 +1098,66 @@ footer {
     max-height: auto; /* Slightly smaller height */
   }
 }
+
+
+
+
+/* Navigation improvements for clarity and coherence with site style */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  padding-left: 0;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 12px 25px;
+  color: #fff; /* Default text color is white */
+  background-color: #333; /* Match header background */
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 0 transparent;
+  user-select: none;
+  min-width: 100px;
+  text-align: center;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #3498db; /* Bright blue on hover */
+  box-shadow: 0 0 8px 2px rgba(52, 152, 219, 0.7);
+  outline: none;
+  color: #fff; /* Keep text white on hover */
+  transform: scale(1.05);
+}
+
+nav ul li a.active {
+  background-color: #3498db; /* Active link color */
+  color: #fff; /* Keep text white for active link */
+  cursor: default;
+  pointer-events: none;
+  box-shadow: 0 0 10px 3px rgba(52, 152, 219, 0.9);
+  transform: none;
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav ul li a {
+    width: 90vw;
+    max-width: 320px;
+    padding: 15px 0;
+    font-size: 1.2em;
+  }
+}
