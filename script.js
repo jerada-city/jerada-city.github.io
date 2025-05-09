@@ -1,14 +1,12 @@
-// Lightbox functionality with dynamic content support
+// Lightbox functionality without captions
 document.addEventListener('DOMContentLoaded', function () {
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
-  const lightboxCaption = document.getElementById('lightbox-caption');
   const closeBtn = lightbox.querySelector('.close');
 
   // Function to open lightbox
-  function openLightbox(src, caption) {
+  function openLightbox(src) {
     lightboxImg.src = src;
-    lightboxCaption.textContent = caption || '';
     lightbox.style.display = 'flex';
     document.body.style.overflow = 'hidden';
   }
@@ -21,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Function to initialize lightbox for images
   function initLightbox() {
-    // Select all images that should have lightbox (including dynamic ones)
+    // Select all images that should have lightbox
     const images = document.querySelectorAll(`
       main img, 
       .gallery-item img, 
@@ -41,10 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       img.addEventListener('click', function(e) {
         e.stopPropagation();
-        const caption = this.alt || 
-                       this.nextElementSibling?.textContent || 
-                       this.parentElement.querySelector('figcaption')?.textContent || '';
-        openLightbox(this.src, caption);
+        openLightbox(this.src);
       });
     });
   }
@@ -78,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Start observing the document with the configured parameters
+  // Start observing the document
   observer.observe(document.body, { 
     childList: true, 
     subtree: true 
