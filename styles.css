@@ -1204,3 +1204,8 @@ nav ul li a.active {
 .close:hover {
   color: #ccc;
 }
+
+.contact-info {
+  margin-top: 10px;
+  font-style: italic;
+}
